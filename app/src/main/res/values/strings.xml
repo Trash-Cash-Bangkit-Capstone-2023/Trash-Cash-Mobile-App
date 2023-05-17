@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Trash Cash</string>
+    <string name="logo_splash_screen_description">Trash Cash logo in splash screen</string>
 </resources>
