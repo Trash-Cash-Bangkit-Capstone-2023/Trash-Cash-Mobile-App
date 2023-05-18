@@ -23,7 +23,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
         Handler().postDelayed({
             findViewById<ProgressBar>(R.id.progressBar).visibility = View.VISIBLE
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }, SPLASH_TIME_OUT)
     }
