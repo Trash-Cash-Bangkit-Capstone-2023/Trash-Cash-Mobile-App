@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.trashcash.databinding.ActivityLoginBinding
+import com.example.trashcash.helper.ProgressBarHandler
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -14,6 +15,9 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.hide()
+
+        val progressBar = ProgressBarHandler(binding.pbLogin)
+        progressBar.hide()
 
         binding.toRegisterButton.setOnClickListener {
             val toRegisterIntent = Intent(this@LoginActivity, RegisterActivity::class.java)

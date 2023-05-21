@@ -11,4 +11,6 @@
     <string name="default_username_hint_text">Username</string>
     <string name="default_register_user_title_text">Register</string>
     <string name="default_contact_hint_text">Phone Number</string>
+    <string name="default_province_prompt_spinner">Provinsi</string>
+    <string name="default_address_hint_text">Address</string>
 </resources>

@@ -69,12 +69,31 @@
             android:textSize="16sp"
             android:layout_marginBottom="25dp"/>
 
-        <Spinner
-            android:id="@+id/spinner_city"
-            android:autofillHints="Kota"
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="15dp"
+            app:strokeColor="@color/gray_1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spinner_province"
+                android:hint="@string/default_province_prompt_spinner"
+                app:ms_background_color="#F2F2F2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <EditText
+            android:id="@+id/ed_register_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"/>
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/default_address_hint_text"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp" />
 
         <Button
             android:id="@+id/register_button"
