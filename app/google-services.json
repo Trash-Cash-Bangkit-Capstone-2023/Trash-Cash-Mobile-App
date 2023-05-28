@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "666278062343",
+    "project_id": "trashcash-dev",
+    "storage_bucket": "trashcash-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666278062343:android:b6ce68d40d101127e1fda2",
+        "android_client_info": {
+          "package_name": "com.example.trashcash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "666278062343-btas5ugthur6hpqfmuvi0e00je22pfth.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFPErQ_o99IICYgI7XW3mHWlOhrY0LLNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666278062343-btas5ugthur6hpqfmuvi0e00je22pfth.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
