@@ -2,11 +2,7 @@ package com.example.trashcash.api
 
 import com.example.trashcash.model.*
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.POST
-import retrofit2.http.PUT
+import retrofit2.http.*
 
 interface ApiService{
     @POST("/v1/auth/register")
@@ -26,4 +22,19 @@ interface ApiService{
         @Body
         userRequest: EditRequest
     ): Call<EditResponse>
+
+    @GET("v1/posts")
+    fun getPosts(
+        @Header("Authorization")
+        token: String,
+
+        @Query("title")
+        title: String?,
+
+        @Query("category")
+        category: String?,
+
+        @Query("user_uid")
+        userUid: String?
+    )
 }

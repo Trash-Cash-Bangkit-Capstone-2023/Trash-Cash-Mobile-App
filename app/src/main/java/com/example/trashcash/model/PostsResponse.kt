@@ -3,7 +3,6 @@ package com.example.trashcash.model
 import com.google.gson.annotations.SerializedName
 
 data class PostsResponse(
-
 	@field:SerializedName("data")
 	val data: Data
 )
