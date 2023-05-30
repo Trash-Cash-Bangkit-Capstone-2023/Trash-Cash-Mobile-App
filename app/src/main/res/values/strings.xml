@@ -15,4 +15,10 @@
     <string name="default_address_hint_text">Address</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_input_form_name">Name:</string>
+    <string name="title_input_form_email">Email:</string>
+    <string name="title_input_form_phone">Phone Number:</string>
+    <string name="title_input_form_province">Provinsi:</string>
+    <string name="title_input_form_address">Address:</string>
+    <string name="btn_save_edit">Simpan</string>
 </resources>

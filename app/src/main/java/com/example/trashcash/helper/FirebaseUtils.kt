@@ -15,4 +15,9 @@ object FirebaseUtils {
                 }
             }
     }
+
+    fun logout() {
+        val auth = FirebaseAuth.getInstance()
+        auth.signOut()
+    }
 }
