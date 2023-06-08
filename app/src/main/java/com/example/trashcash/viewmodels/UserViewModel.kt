@@ -12,7 +12,7 @@ import retrofit2.Response
 
 class UserViewModel: ViewModel() {
     companion object{
-        const val TAG = "MainViewModel"
+        const val TAG = "UserViewModel"
     }
 
     private val _profile = MutableLiveData<UserData>()

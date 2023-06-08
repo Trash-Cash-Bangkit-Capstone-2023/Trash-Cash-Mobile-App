@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
+    android:layout_marginHorizontal="25dp"
     android:layout_marginVertical="20dp"
     card_view:cardCornerRadius="12dp"
     card_view:cardElevation="8dp"
@@ -21,49 +22,61 @@
             android:id="@+id/iv_card_post"
             style="@style/Image"
             android:layout_height="211dp"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginHorizontal="25dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/badge_category_background">
+            android:weightSum="1">
 
-            <TextView
-                android:id="@+id/tv_badge_card_category"
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Bottle"
-                android:textColor="@android:color/white"
-                android:textSize="12sp"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:paddingTop="4dp"
-                android:paddingBottom="4dp" />
+                android:background="@drawable/badge_category_background"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent">
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_badge_card_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    tools:text="Bottle" />
+
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <TextView
             android:id="@+id/tv_card_title"
             style="@style/Text.Heading1"
-            android:layout_marginBottom="14dp"
             android:layout_marginHorizontal="25dp"
+            android:layout_marginBottom="14dp"
             tools:text="Sampah Botol Siap Daur Ulang" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp"
             android:layout_marginHorizontal="25dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
             android:weightSum="1">
 
             <TextView
                 android:id="@+id/tv_trash_price"
                 style="@style/Text.Heading2"
                 android:layout_weight="0.5"
+                android:textSize="14sp"
                 tools:text="Mulai dari IDR 30.000" />
 
             <TextView
@@ -71,11 +84,12 @@
                 style="@style/Text.Heading2"
                 android:layout_weight="0.5"
                 android:textAlignment="textEnd"
+                android:textSize="14sp"
                 tools:text="Qty: 3kg" />
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_booking_card_car"
+            android:id="@+id/btn_see_detail"
             style="@style/Button"
             android:layout_marginHorizontal="25dp"
             android:text="@string/btn_see_detail" />

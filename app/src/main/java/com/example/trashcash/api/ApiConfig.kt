@@ -15,7 +15,7 @@ class ApiConfig {
                 .build()
 
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://trashcash-staging-api.fly.dev")
+                .baseUrl("https://trashcash-project.et.r.appspot.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()

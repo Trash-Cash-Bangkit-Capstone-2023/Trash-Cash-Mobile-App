@@ -36,5 +36,5 @@ interface ApiService{
 
         @Query("user_uid")
         userUid: String?
-    )
+    ): Call<PostsResponse>
 }

@@ -4,16 +4,16 @@ import com.google.gson.annotations.SerializedName
 
 data class PostsResponse(
 	@field:SerializedName("data")
-	val data: Data
+	val data: ListPost
 )
 
-data class Data(
+data class ListPost(
 
 	@field:SerializedName("posts")
-	val posts: List<PostsItem>
+	val posts: List<PostItem>
 )
 
-data class PostsItem(
+data class PostItem(
 
 	@field:SerializedName("quantity")
 	val quantity: String,
@@ -43,5 +43,8 @@ data class PostsItem(
 	val tags: List<String>,
 
 	@field:SerializedName("user_uid")
-	val userUid: String
+	val userUid: String,
+
+	@field:SerializedName("price")
+	val price: Long
 )
