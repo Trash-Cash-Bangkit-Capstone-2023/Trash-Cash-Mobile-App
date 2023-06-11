@@ -5,6 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.trashcash.api.ApiConfig
+import com.example.trashcash.model.Post
+import com.example.trashcash.model.PostDetailResponse
 import com.example.trashcash.model.PostItem
 import com.example.trashcash.model.PostsResponse
 import retrofit2.Call
@@ -15,6 +17,9 @@ class PostViewModel: ViewModel() {
 
     private val _posts = MutableLiveData<List<PostItem>>()
     val posts: LiveData<List<PostItem>> = _posts
+
+    private val _post = MutableLiveData<Post>()
+    val post: LiveData<Post> = _post
 
     fun getPosts(token: String, title: String?, category: String?){
         val client = ApiConfig.getApiService().getPosts("Bearer $token", title, category, null)
@@ -34,6 +39,29 @@ class PostViewModel: ViewModel() {
             }
 
             override fun onFailure(call: Call<PostsResponse>, t: Throwable) {
+                Log.e("PostViewModel", "onFailure: ${t.message.toString()}")
+            }
+        })
+    }
+
+    fun getPost(token: String, id: String){
+        val client = ApiConfig.getApiService().getPost(id, "Bearer $token")
+
+        client.enqueue(object : Callback<PostDetailResponse> {
+            override fun onResponse(
+                call: Call<PostDetailResponse>,
+                response: Response<PostDetailResponse>
+            ) {
+                if(response.isSuccessful){
+                    val apiResponse = response.body()
+
+                    if(apiResponse != null){
+                        _post.value = apiResponse.data.post
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<PostDetailResponse>, t: Throwable) {
                 Log.e("PostViewModel", "onFailure: ${t.message.toString()}")
             }
         })

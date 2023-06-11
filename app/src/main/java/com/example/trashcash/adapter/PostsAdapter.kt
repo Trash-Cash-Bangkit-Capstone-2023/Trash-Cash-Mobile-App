@@ -1,14 +1,17 @@
 package com.example.trashcash.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.trashcash.PostDetailActivity
 import com.example.trashcash.R
 import com.example.trashcash.helper.addThousandSeparator
 import com.example.trashcash.model.PostItem
@@ -28,7 +31,11 @@ class PostsAdapter(private val context: Context, private val posts: List<PostIte
         viewHolder.qty.text = "Qty: ${posts[position].quantity} Kg"
         viewHolder.price.text = "Mulai dari IDR ${addThousandSeparator(posts[position].price)}"
 
-        viewHolder.detailBtn.setOnClickListener {  }
+        viewHolder.detailBtn.setOnClickListener {
+            val toDetailIntent = Intent(context, PostDetailActivity::class.java)
+            toDetailIntent.putExtra(PostDetailActivity.EXTRA_ID, posts[position].id)
+            startActivity(context, toDetailIntent, null)
+        }
     }
 
     override fun getItemCount() = posts.size

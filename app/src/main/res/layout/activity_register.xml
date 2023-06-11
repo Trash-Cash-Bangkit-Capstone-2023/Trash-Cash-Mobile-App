@@ -3,122 +3,176 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="vertical">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="25dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/default_register_user_title_text"
-            android:textSize="30sp"
-            android:textAlignment="center"
-            android:layout_marginBottom="30dp"
-            android:textColor="@color/black"/>
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/ed_register_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:hint="@string/default_username_hint_text"
-            android:padding="16dp"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:layout_marginBottom="20dp" />
-
-        <EditText
-            android:id="@+id/ed_register_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:hint="@string/default_email_hint_text"
-            android:padding="16dp"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:layout_marginBottom="20dp" />
-
-        <EditText
-            android:id="@+id/ed_register_contact"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:hint="@string/default_contact_hint_text"
-            android:padding="16dp"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:layout_marginBottom="20dp" />
-
-        <com.example.trashcash.customview.PasswordEditText
-            android:id="@+id/ed_register_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:hint="@string/default_password_hint_text"
-            android:inputType="textPassword"
-            android:padding="16dp"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:layout_marginBottom="25dp"/>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            app:cardCornerRadius="15dp"
-            app:strokeColor="@color/gray_1"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp">
-
-            <com.jaredrummler.materialspinner.MaterialSpinner
-                android:id="@+id/spinner_province"
-                android:hint="@string/default_province_prompt_spinner"
-                app:ms_background_color="#F2F2F2"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.card.MaterialCardView>
+                android:layout_height="wrap_content"
+                android:text="@string/default_register_user_title_text"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:layout_marginBottom="30dp"
+                android:textColor="@color/black"/>
 
-        <EditText
-            android:id="@+id/ed_register_address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:hint="@string/default_address_hint_text"
-            android:padding="16dp"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:layout_marginBottom="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_input_form_name"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"/>
 
-        <Button
-            android:id="@+id/register_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/teal_700"
-            android:textColor="@color/white"
-            android:text="@string/default_register_btn_text"
-            android:layout_marginBottom="25dp" />
+            <EditText
+                android:id="@+id/ed_register_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:hint="@string/default_username_hint_text"
+                android:padding="16dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/default_already_have_account"
-            android:textAlignment="center"
-            android:layout_marginBottom="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_input_form_email"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"/>
 
-        <Button
-            android:id="@+id/to_login_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/teal_200"
-            android:text="@string/default_login_btn_text"
-            android:textColor="@color/teal_700"/>
-    </LinearLayout>
+            <EditText
+                android:id="@+id/ed_register_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:hint="@string/default_email_hint_text"
+                android:padding="16dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_input_form_phone"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/ed_register_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:hint="@string/default_contact_hint_text"
+                android:padding="16dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_input_form_password"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"/>
+
+            <com.example.trashcash.customview.PasswordEditText
+                android:id="@+id/ed_register_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:hint="@string/default_password_hint_text"
+                android:inputType="textPassword"
+                android:padding="16dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="25dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_input_form_province"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="15dp"
+                app:strokeColor="@color/gray_1"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/spinner_province"
+                    android:hint="@string/default_province_prompt_spinner"
+                    app:ms_background_color="#F2F2F2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_input_form_address"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/ed_register_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:hint="@string/default_address_hint_text"
+                android:padding="16dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp" />
+
+            <Button
+                android:id="@+id/register_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="@color/white"
+                android:text="@string/default_register_btn_text"
+                android:layout_marginBottom="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/default_already_have_account"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/to_login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_200"
+                android:text="@string/default_login_btn_text"
+                android:textColor="@color/teal_700"/>
+        </LinearLayout>
+    </ScrollView>
 
     <ProgressBar
         android:id="@+id/pb_register"
