@@ -21,6 +21,10 @@ class PostViewModel: ViewModel() {
     private val _post = MutableLiveData<Post>()
     val post: LiveData<Post> = _post
 
+    fun filterPostByTitle( keyword: String) {
+        _posts.value = _posts.value?.filter { it.title.contains(keyword, ignoreCase = true) }
+    }
+
     fun getPosts(token: String, title: String?, category: String?){
         val client = ApiConfig.getApiService().getPosts("Bearer $token", title, category, null)
 

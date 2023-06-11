@@ -59,25 +59,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/title_input_form_email"
-                android:textSize="18sp"
-                android:layout_marginBottom="10dp"
-                android:textColor="@color/black"/>
-
-            <EditText
-                android:id="@+id/ed_edit_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/edit_text_background"
-                android:hint="@string/default_email_hint_text"
-                android:padding="16dp"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"
-                android:layout_marginBottom="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="@string/title_input_form_phone"
                 android:textSize="18sp"
                 android:layout_marginBottom="10dp"

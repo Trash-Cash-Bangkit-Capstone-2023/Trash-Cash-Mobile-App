@@ -46,4 +46,13 @@ interface ApiService{
         @Header("Authorization")
         token: String,
     ): Call<PostDetailResponse>
+
+    @GET("v1/users/{id}/posts")
+    fun getPostsByUserId(
+        @Path("id")
+        id:String,
+
+        @Header("Authorization")
+        token: String,
+    ): Call<UserPostsResponse>
 }

@@ -27,7 +27,7 @@ class PostsAdapter(private val context: Context, private val posts: List<PostIte
             .into(viewHolder.imgPost)
 
         viewHolder.category.text = posts[position].category
-        viewHolder.title.text = posts[position].category
+        viewHolder.title.text = posts[position].title
         viewHolder.qty.text = "Qty: ${posts[position].quantity} Kg"
         viewHolder.price.text = "Mulai dari IDR ${addThousandSeparator(posts[position].price)}"
 

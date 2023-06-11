@@ -93,7 +93,6 @@ class EditProfileActivity : AppCompatActivity() {
         binding.editButton.setOnClickListener {
             val request = EditRequest(
                 name = binding.edEditName.text.toString(),
-                email = binding.edEditEmail.text.toString(),
                 phone = binding.edEditContact.text.toString(),
                 province = binding.spinnerEditProvince.text.toString(),
                 address = binding.edEditAddress.text.toString()
@@ -115,7 +114,6 @@ class EditProfileActivity : AppCompatActivity() {
 
     private fun showUserData(user: User){
         binding.edEditName.setText(user.name)
-        binding.edEditEmail.setText(user.email)
         binding.edEditContact.setText(user.phone)
         binding.edEditAddress.setText(user.address)
     }

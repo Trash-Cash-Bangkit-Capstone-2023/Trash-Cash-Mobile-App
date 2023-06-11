@@ -11,6 +11,4 @@ data class EditRequest(
     val province: String,
     @SerializedName("phone")
     val phone: String,
-    @SerializedName("email")
-    val email: String,
 )
